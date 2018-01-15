@@ -16,10 +16,15 @@ class TodoList extends Component {
         this.props.toggleCompleted(todo);
     }
 
+    editTodo(todo, todoEdited) {
+        this.props.editTodo(todo, todoEdited);
+    }
+
     render() {
         const todoItems = this.props.todos.map((todo, index) =>
             <TodoItem item={todo}
                       removeTodo={this.removeTodo.bind(this)}
+                      editTodo={this.editTodo.bind(this)}
                       toggleCompleted={this.toggleCompleted.bind(this)}
                       key={index}>
             </TodoItem>

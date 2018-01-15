@@ -28,6 +28,15 @@ class Todo extends Component {
         })
     }
 
+    editTodo(todoItem, todoItemEdited) {
+        this.setState({
+            todoItems: this.state.todoItems.map(todo => todo === todoItem ?
+                { ...todo, text: todoItemEdited } : 
+                todo
+            )
+        })
+    }
+
     toggleCompleted(todoItem) {
         this.setState({
             todoItems: this.state.todoItems.map(todo => todo === todoItem ?
@@ -44,6 +53,7 @@ class Todo extends Component {
                 <div className="todoList">
                     <TodoList todos={this.state.todoItems}
                               removeTodo={this.removeTodo.bind(this)}
+                              editTodo={this.editTodo.bind(this)}
                               toggleCompleted={this.toggleCompleted.bind(this)}></TodoList>
                 </div>
             </div>

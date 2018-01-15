@@ -16,7 +16,7 @@ class TodoForm extends Component {
         e.preventDefault();
 
         if(this.state.todoText == '') {
-            this.setState({hasError: true})
+            this.setState({hasError: true});
         }
         else {
             this.props.addTodo({
