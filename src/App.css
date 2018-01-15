@@ -88,3 +88,12 @@ button:focus {
   color: red;
   margin: 5px 0;
 }
+
+.todoList input {
+  flex: 1;
+}
+
+.todoList .todo-form {
+  padding: 10px 0;
+  border-bottom: 1px solid #d3d3d1;
+}
